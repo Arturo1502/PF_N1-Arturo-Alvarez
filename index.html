@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- Link para el stilo de texto -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Raleway&display=swap" rel="stylesheet">
+
+
+  <!-- link para los icons -->
+  <script src="https://kit.fontawesome.com/e40dfd2f11.js" crossorigin="anonymous"></script>
+
+  <!-- Link to Script -->
+  <script src="./main.js" defer></script>
+
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <title>To-Do App</title>
+</head>
+
+<body>
+
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-6 offset-md-3" id="container">
+        <h2 class="text-center">#todo</h2>
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto" id="listadenav">
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="showAll()">ALL</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="showActive()">ACTIVES</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="showCompleted()">COMPLETED</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div id="allSection">
+          <div class="añade">
+            <input type="text" class="form-control" id="taskInput" placeholder="add details">
+            <button class="btn btn-primary" onclick="addTask()">Add</button>
+          </div>
+          <ul id="taskList"></ul>
+        </div>
+
+        <div id="activeSection" style="display:none;">
+          <div class="añade">
+            <input type="text" class="form-control" id="taskInput" placeholder="add details">
+            <span id="error-message" class="text-danger"></span>
+            <button class="btn btn-primary" onclick="addTask()">Add</button>
+        </div>
+          <ul id="activeTaskList"></ul>
+        </div>
+
+        <div id="completedSection" style="display: flex;flex-direction: column;">
+          <ul id="completedTaskList" class="custom-list"></ul>
+          <div class="d-flex justify-content-end">
+              <button class="btn btn-danger" onclick="deleteAll()"><i class="fa-solid fa-trash"></i>  Delete all</button>
+          </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
