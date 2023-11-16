@@ -110,7 +110,7 @@ function displayTasks(elementId, showActiveTasks, showCompletedTasks) {
       if (showCompletedTasks) {
         let deleteButton = document.createElement("i");
         deleteButton.nodeType = "button"
-        deleteButton.className = "fa-solid fa-trash";
+        deleteButton.className = "fa-solid fa-trash basurero";
         deleteButton.onclick = function () {
           deleteTask(index);
         };
